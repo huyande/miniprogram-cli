@@ -1,3 +1,8 @@
+##
+搭建小程序开发脚手架
+1. 引入腾讯tdesign UI  https://tdesign.tencent.com/starter/
+2. 完成对用户授权的开发 后端地址：基于renren-fast 开发的 https://github.com/huyande/renren-fast-mini.git
+3. 微信小程序脚手架 https://github.com/binarywang/weixin-java-miniapp-demo.git
 ## 小程序开发现状:
 
 1. 开发工具不好使用(无法热更新，编译缓慢)；
