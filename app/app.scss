@@ -1,0 +1,33 @@
+page{
+  background: #f9fafc;
+  padding: 10rpx 20rpx;
+  // width: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  // padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  
+} 
+.one{
+  color:red;
+  .two{
+    color:blue;
+  }
+}
+
+.container-card{
+    background: #fff;
+    box-shadow: 0rpx 10rpx 40rpx -10rpx rgba(0, 0, 0, 0.05);
+    border-radius: 32rpx;
+    margin-top: 24rpx;
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    width: 95%;
+}
