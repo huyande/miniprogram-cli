@@ -1,3 +1,19 @@
-.one{
-    color:red;
+.repair{
+    width: 60%;
+    height: 300rpx;
+    background: #be085d;
+    border-radius: 16rpx;
+    margin: 10rpx 10rpx;
+}
+.opinion{
+    width: 40%;
+    height: 300rpx;
+    background: #12e735;
+    .opinion-item{
+        width: 95%;
+        height: 140rpx;
+        background: #1804d4;
+        border-radius: 16rpx;
+        margin: 5rpx 10rpx;
+    }
 }

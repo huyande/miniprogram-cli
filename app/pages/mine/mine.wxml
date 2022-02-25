@@ -6,13 +6,13 @@
                 <t-avatar shape="circle" size="large" image="{{userInfo.avatarUrl}}" wx:if="{{hasUserInfo}}" />
                 <view class="user-info-name">{{userInfo.nickName}}</view>
             </block>
-            
+
             <t-button  theme="primary" size="large" wx:if="{{!hasUserInfo}}" bindtap="getUserProfile">点击登陆</t-button>
         </view>
+        <view class="container-card my-container">
+            <t-cell title="我的信息" hover arrow />
+        </view>
     </view>
-    <view class="divider"><t-divider t-class="demo-1"/></view>
-    <view class="container-card my-container">
-    <t-cell title="我的信息" hover arrow />
-    </view>
+
 </page>
 

@@ -1,6 +1,6 @@
 page{
   background: #f9fafc;
-  padding: 10rpx 20rpx;
+  //padding: 10rpx 20rpx;
   // width: 100%;
 }
 
@@ -12,8 +12,8 @@ page{
   justify-content: space-between;
   // padding: 10rpx 20rpx;
   box-sizing: border-box;
-  
-} 
+
+}
 .one{
   color:red;
   .two{
@@ -30,4 +30,17 @@ page{
     flex-flow: column;
     overflow: hidden;
     width: 95%;
+}
+
+.container-card-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.container-card-flex-column{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items:center;
 }

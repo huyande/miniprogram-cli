@@ -8,9 +8,8 @@
   },
   "pages":[
     "pages/index/index",
-    "pages/mine/mine"
-    
-    
+    "pages/mine/mine",
+    "pages/repair/repair"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -28,6 +27,11 @@
       "iconPath": "images/icon_consult.png",
       "pagePath": "pages/index/index",
       "text": "首页"
+    },{
+        "selectedIconPath": "images/icon_baoxiu_press.png",
+        "iconPath": "images/icon_baoxiu.png",
+        "pagePath": "pages/repair/repair",
+        "text": "报修"
     },{
       "selectedIconPath": "images/icon_mine_press.png",
       "iconPath": "images/icon_mine.png",
