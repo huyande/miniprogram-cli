@@ -1,18 +1,20 @@
 <page>
     <view class="container">
         <view class="avatar">
-            <t-avatar  icon="user" size="large" wx:if="{{!hasUserInfo}}"/>
             <block wx:if="{{hasUserInfo}}">
-                <t-avatar shape="circle" size="large" image="{{userInfo.avatarUrl}}" wx:if="{{hasUserInfo}}" />
+                <van-image
+                        round
+                        width="5rem"
+                        height="5rem"
+                        src="{{userInfo.avatarUrl}}"
+                />
                 <view class="user-info-name">{{userInfo.nickName}}</view>
             </block>
-
-            <t-button  theme="primary" size="large" wx:if="{{!hasUserInfo}}" bindtap="getUserProfile">点击登陆</t-button>
-        </view>
-        <view class="container-card my-container">
-            <t-cell title="我的信息" hover arrow />
+            <van-button type="primary" wx:if="{{!hasUserInfo}}" bindtap="getUserProfile">点击登陆</van-button>
         </view>
     </view>
-
+    <view class="container-card my-container">
+        <van-cell title="我的信息" is-link />
+    </view>
 </page>
 
