@@ -1,16 +1,16 @@
 {
   "usingComponents": {
-    "t-avatar": "tdesign-miniprogram/avatar/avatar",
-    "t-divider": "tdesign-miniprogram/divider/divider",
-    "t-button": "tdesign-miniprogram/button/button",
-    "t-cell": "tdesign-miniprogram/cell/cell",
-    "t-icon": "tdesign-miniprogram/icon/icon"
+    "van-image": "@vant/weapp/image/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-icon": "@vant/weapp/icon/index"
   },
   "pages":[
     "pages/index/index",
     "pages/mine/mine"
-    
-    
+
+
   ],
   "window":{
     "backgroundTextStyle":"light",
