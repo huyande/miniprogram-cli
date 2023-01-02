@@ -1,0 +1,84 @@
+<view class="container">
+    <view class="status">
+        <view>
+            <view class="text">待派单</view>
+            <view class="tip">等待维修师傅上门维修</view>
+        </view>
+        <view>
+            <image class="img" src="/images/info-repaire.png"></image>
+        </view>
+    </view>
+
+    <view class="info-mine">
+        <view class="mine-h2">报修人信息</view>
+        <view class="hr"></view>
+        <view class="info-data">
+            <view class="info-data-row">
+                <view class="info-data-li">姓名:</view>
+                <view class="info-data-res">张三</view>
+            </view>
+            <view class="info-data-row">
+                <view class="info-data-li">手机号:</view>
+                <view class="info-data-res">181966653321</view>
+            </view>
+            <view class="info-data-row">
+                <view class="info-data-li">维修单号:</view>
+                <view class="info-data-res">22222222</view>
+            </view>
+            <view class="info-data-row">
+                <view class="info-data-li">报修时间:</view>
+                <view class="info-data-res">2022-06-26 12:00:00</view>
+            </view>
+            <view class="info-data-row">
+                <view class="info-data-li">报修地址:</view>
+                <view class="info-data-res">报修地点1-xxxx</view>
+            </view>
+            <view class="info-data-row">
+                <view class="info-data-li">预约上门时间:</view>
+                <view class="info-data-res">2022-06-26 14:00:00</view>
+            </view>
+        </view>
+        <view class="hr-b"></view>
+    </view>
+
+    <view class="info-mine">
+        <view class="mine-h2">故障信息</view>
+        <view class="hr"></view>
+        <view class="info-data">
+            <view class="info-data-row">
+                <view class="info-data-li">故障类型:</view>
+                <view class="info-data-res">xxx</view>
+            </view>
+            <view class="info-data-row">
+                <view class="info-data-li">故障描述:</view>
+                <view class="info-data-res">想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想想</view>
+            </view>
+            <view class="info-data-row">
+                <image class="img" src="http://i.ce.cn/newwap/sh/sgg/202206/26/W020220626345092378694.png" data-url="http://i.ce.cn/newwap/sh/sgg/202206/26/W020220626345092378694.png" bindtap='previewImage'></image>
+            </view>
+        </view>
+        <view class="hr-b"></view>
+    </view>
+    <view class="info-mine" style="margin-bottom: 200rpx">
+        <view class="mine-h2">维修信息</view>
+        <view class="hr"></view>
+        <view class="info-data">
+            <view class="info-data-row">
+                <view class="info-data-li">维修员:</view>
+                <view class="info-data-res">xxx</view>
+            </view>
+            <view class="info-data-row">
+                <view class="info-data-li">手机号:</view>
+                <view class="info-data-res">11111</view>
+            </view>
+        </view>
+    </view>
+
+    <!--底部-->
+    <view class="footer ios-bottom">
+        <view class="submit">
+            <van-button type="primary" round size="small">催单</van-button>
+        </view>
+    </view>
+</view>
+
