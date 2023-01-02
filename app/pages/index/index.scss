@@ -1,19 +1,28 @@
 .repair{
-    width: 60%;
-    height: 300rpx;
-    background: #be085d;
+    width: 100%;
+    height: 180rpx;
     border-radius: 16rpx;
     margin: 10rpx 10rpx;
-}
-.opinion{
-    width: 40%;
-    height: 300rpx;
-    background: #12e735;
-    .opinion-item{
-        width: 95%;
-        height: 140rpx;
-        background: #1804d4;
-        border-radius: 16rpx;
-        margin: 5rpx 10rpx;
+    align-items: first;
+    padding: 20rpx 10rpx;
+    .header{
+        font-size: 40rpx;
+        font-weight: bold;
+        color: white;
+    }
+    .tip{
+        font-size: 20rpx;
+        color: white;
+    }
+    .icon{
+        text-align: right;
     }
 }
+
+.back-color-one{
+    background-image: linear-gradient(to right, #66CDAA , #76EEC6);
+}
+.back-color-two{
+    background-image: linear-gradient(to right, #7B68EE , #8470FF);
+}
+

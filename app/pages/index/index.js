@@ -3,17 +3,17 @@
 const app = getApp();
 
 Page({
-	data: {
-
+	data: {},
+	goRepair: function () {
+		wx.navigateTo({
+			url: '/pages/repair/repair'
+		});
 	},
-	//事件处理函数
-	bindViewTap: function () {
-
+	goMyRepair: function () {
+		wx.navigateTo({
+			url: '/pages/mine-repair/mine-repair'
+		});
 	},
-	onLoad: function () {
-
-	},
-	getUserInfo: function (e) {
-
-	}
+	onLoad: function () {},
+	getUserInfo: function (e) {}
 });

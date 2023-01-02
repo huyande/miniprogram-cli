@@ -1,5 +1,5 @@
 <page>
-    <view class="container">
+    <view class="container mine-contatiner">
         <view class="avatar">
             <block wx:if="{{hasUserInfo}}">
                 <van-image
@@ -14,7 +14,7 @@
         </view>
     </view>
     <view class="container-card my-container">
-        <van-cell title="我的信息" is-link />
+        <van-cell title="我的报修" is-link />
     </view>
 </page>
 

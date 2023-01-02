@@ -1,0 +1,28 @@
+page{
+  overflow-x:scroll;
+}
+.container{
+
+}
+.cell-titel{
+  color: #646566 !important;;
+}
+.cell-value{
+  //text-align: left !important;
+}
+.upload-file{
+  margin: 20rpx 25rpx;
+  .title{
+    margin-bottom: 20rpx;
+    font-size: 30rpx;
+    color: #646566;
+  }
+}
+
+.field-text{
+  min-height: 150rpx !important;
+}
+
+.submit{
+  width: 100%;
+}

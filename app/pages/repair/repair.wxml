@@ -1,0 +1,106 @@
+<view class="container">
+    <view class="container-card">
+        <van-cell-group>
+            <van-field
+                    model:value="{{ username }}"
+                    clearable
+                    label="姓名"
+                    placeholder="请输入姓名"
+            />
+
+            <van-field
+                    model:value="{{ password }}"
+                    label="手机号"
+                    placeholder="请输入手机号"
+            />
+            <van-cell title="报修区域"
+                      value="{{area}}"
+                      is-link
+                      bind:click="showPopup"
+                      title-class="cell-titel"
+                      value-class="cell-value"/>
+            <van-popup show="{{ area_show }}"
+                       custom-style="height: 50%;"
+                       bind:close="onClose"
+                       position="bottom">
+                <van-picker
+                        show-toolbar
+                        title="请选择"
+                        columns="{{ columns }}"
+                        bind:cancel="onClose"
+                        bind:confirm="onConfirm"
+                />
+            </van-popup>
+            <van-field
+                    model:value="{{ password }}"
+                    label="详细地点"
+                    placeholder="例：6楼606"
+            />
+
+            <van-cell title="故障类型"
+                      value="{{area}}"
+                      is-link
+                      bind:click="showPopup"
+                      title-class="cell-titel"
+                      value-class="cell-value"/>
+            <van-popup show="{{ area_show }}"
+                       custom-style="height: 50%;"
+                       bind:close="onClose"
+                       position="bottom">
+                <van-picker
+                        show-toolbar
+                        title="请选择"
+                        columns="{{ columns }}"
+                        bind:cancel="onClose"
+                        bind:confirm="onConfirm"
+                />
+            </van-popup>
+
+            <view class="upload-file">
+                <view class="title">上传故障图片</view>
+                <!--上传视频-->
+                <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="delImg"/>
+            </view>
+
+            <van-field
+                    value="{{ message }}"
+                    label="故障描述"
+                    type="textarea"
+                    placeholder="请输入故障描述"
+                    autosize
+                    maxlength="140"
+                    show-word-limit
+                    input-class="field-text"
+            />
+
+            <van-cell title="预约时间"
+                      value="{{time}}"
+                      is-link
+                      bind:click="showTimePopup"
+                      title-class="cell-titel"
+                      value-class="cell-value"/>
+            <van-popup show="{{ time_show }}"
+                       custom-style="height: 50%;"
+                       bind:close="onTimeClose"
+                       position="bottom">
+                <van-datetime-picker
+                        type="datetime"
+                        value="{{ currentDate }}"
+                        min-date="{{ minDate }}"
+                        max-date="{{ maxDate }}"
+                        filter="{{ timeFilter }}"
+                        bind:input="onInput"
+                        bind:confirm ="onTimeConfirm"
+                />
+            </van-popup>
+        </van-cell-group>
+
+        <view class="footer ios-bottom">
+            <view class="submit">
+                <van-button type="primary" round size="large">上报</van-button>
+            </view>
+
+        </view>
+    </view>
+</view>
+

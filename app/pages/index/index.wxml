@@ -1,14 +1,25 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="container-card">
-    <view class="container-card-flex">
-      <view class="repair">我要报修</view>
-      <view class="opinion">
-        <view class="container-card-flex-column">
-          <view class="opinion-item">xxx</view>
-          <view class="opinion-item">xxx</view>
+
+<view class="container-card">
+  <image src="/images/weixiu.jpg"></image>
+  <view class="container-card-flex">
+    <view class="repair back-color-one" bindtap="goRepair">
+      <view class="container-card-flex-column ">
+        <view class="header">我要报修</view>
+        <view class="tip">点我快速报修</view>
+        <view class="icon">
+          <van-icon name="setting" size="50px" color="white" style="text-align: right"/>
+        </view>
+      </view>
+    </view>
+    <view class="repair back-color-two">
+      <view class="container-card-flex-column " bindtap="goMyRepair">
+        <view class="header">我的报修</view>
+        <view class="tip">报修记录 快速查询</view>
+        <view class="icon">
+          <van-icon name="todo-list" size="50px" color="white" style="text-align: right"/>
         </view>
       </view>
     </view>
   </view>
 </view>
+
