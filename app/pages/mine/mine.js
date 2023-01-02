@@ -1,43 +1,40 @@
-const app =getApp();
-const API = require('../../utils/api')
+const app = getApp();
+const API = require('../../utils/api');
+const { getUrl } = require('../../utils/request');
 Page({
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		userInfo:null,
-		hasUserInfo:false
+		userInfo: null,
+		hasUserInfo: false
 	},
-
-	getUserProfile(e) {
-		// 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
-		// 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-		wx.getUserProfile({
-		  lang:'zh_CN',
-		  desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-		  success: (res) => {
-			this.setData({
-			  userInfo: res.userInfo,
-			  hasUserInfo: true
-			})
-			API.saveUser({openid:app.globalData.openid,avatarUrl:res.userInfo.avatarUrl,nickName:res.userInfo.nickName}).then(res=>{
-				console.log(res)
-				wx.setStorageSync('userInfo', res.userInfo)
-			})
-		  }
-		})
-	  },
-
+	onChooseAvatar: function (e) {
+		const { avatarUrl } = e.detail;
+		let url = getUrl();
+		wx.uploadFile({
+			url: url + 'wx/file/upload', //仅为示例，非真实的接口地址
+			filePath: avatarUrl,
+			name: 'file',
+			success(res) {
+				API.saveUser({ openid: app.globalData.openid, avatarUrl: res.name }).then((res) => {
+					console.log(res);
+					res.userInfo.avatarUrl = url + 'wx/file/readImg/' + res.userInfo.avatarUrl;
+					wx.setStorageSync('userInfo', res.userInfo);
+				});
+			}
+		});
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		let userInfo = wx.getStorageSync('userInfo')
-		if(userInfo){
+		let userInfo = wx.getStorageSync('userInfo');
+		if (userInfo) {
 			this.setData({
-				userInfo:userInfo,
-				hasUserInfo:true
-			})
+				userInfo: userInfo,
+				hasUserInfo: true
+			});
 		}
 	},
 

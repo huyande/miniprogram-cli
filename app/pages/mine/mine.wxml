@@ -8,9 +8,8 @@
                         height="5rem"
                         src="{{userInfo.avatarUrl}}"
                 />
-                <view class="user-info-name">{{userInfo.nickName}}</view>
             </block>
-            <van-button type="primary" wx:if="{{!hasUserInfo}}" bindtap="getUserProfile">点击登陆</van-button>
+            <button type="primary" class="avatar-wrapper" wx:if="{{!hasUserInfo}}"  open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">获取头像</button>
         </view>
     </view>
     <view class="container-card my-container">
